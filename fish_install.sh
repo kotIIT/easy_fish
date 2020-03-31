@@ -2,10 +2,10 @@
 #install and config fish shell
 
 install_config(){
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt update
-sudo apt install fish -y
-curl -L https://get.oh-my.fish | fish
+	sudo apt-add-repository ppa:fish-shell/release-3
+	sudo apt update
+	sudo apt install fish -y
+	curl -L https://get.oh-my.fish | fish
 }
 
 change_env(){
@@ -14,7 +14,7 @@ change_env(){
 }
 
 get_omf(){
-./omf_tweaks.fish
+	./omf_tweaks.fish
 }
 
 easy_setup(){
@@ -29,11 +29,11 @@ missing(){
 arg=$1
 Output(){
   case  $arg in
-	m) missing;;
-	env) change_env;;
-	omf) get_omf;;
-	$1) easy_setup
-esac
+    m) missing;;
+    env) change_env;;
+    omf) get_omf;;
+    $1) easy_setup
+  esac
 }
 
 Output
